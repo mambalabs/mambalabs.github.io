@@ -1,0 +1,220 @@
+.btn.btn-primary {
+	transition: 0.3s all ease-in-out;
+}
+.btn.btn-primary:hover {
+	transform: scale(1.1);
+}
+.nav-link {
+	position: relative;
+}
+.nav-link.active::after {
+	content: '•';
+	position: absolute;
+	bottom: -12px;
+	left: 0;
+	width: 100%;
+	text-align: center;
+	color: #fff;
+}
+.shrink .nav-link.active::after {
+	color: #eb4e4e;
+}
+
+.particles {
+	height: 100vh;
+	background: linear-gradient(45deg, #7c2222, #eb4e4e, #471111);
+	background-size: 300% 300%;
+	-webkit-animation: headerBg 30s ease infinite;
+	-moz-animation: headerBg 30s ease infinite;
+	animation: headerBg 30s ease infinite;
+}
+.header .container {
+	position: relative;
+}
+.header .content {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	width: 100%;
+	position: absolute;
+	top: 50vh;
+	left: 0;
+	transform: translateY(-50%);
+	z-index: 2;
+	pointer-events: none;
+}
+.content h1,
+.content p {
+	color: #ffffff;
+	margin: 0;
+}
+.content img {
+	width: 400px;
+}
+.content .headline {
+	pointer-events: all;
+	display: inline;
+	font-size: 3rem;
+}
+canvas {
+	display: block;
+	position: absolute;
+	top: 0;
+	left: 0;
+	z-index: 1;
+}
+.caret {
+	border-right: 0.05em solid;
+	animation: caret 1s steps(1) infinite;
+}
+
+@keyframes caret {
+	50% {
+		border-color: transparent;
+	}
+}
+@-webkit-keyframes headerBg {
+	0% {
+		background-position: 0% 84%;
+	}
+	50% {
+		background-position: 100% 16%;
+	}
+	100% {
+		background-position: 0% 84%;
+	}
+}
+@-moz-keyframes headerBg {
+	0% {
+		background-position: 0% 84%;
+	}
+	50% {
+		background-position: 100% 16%;
+	}
+	100% {
+		background-position: 0% 84%;
+	}
+}
+@keyframes headerBg {
+	0% {
+		background-position: 0% 84%;
+	}
+	50% {
+		background-position: 100% 16%;
+	}
+	100% {
+		background-position: 0% 84%;
+	}
+}
+
+.product-item {
+	padding: 8px;
+	border-radius: 8px;
+	border: 1px solid #dee2e6;
+	transition: 0.5s all ease-in-out;
+}
+
+.product-image {
+	position: relative;
+	transition: 0.5s all ease-in-out;
+}
+.product-image .dycovid-phone {
+	position: absolute;
+	height: 84%;
+	bottom: 0;
+	right: 56px;
+	z-index: 2;
+}
+
+.product-info {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	position: relative;
+	z-index: 2;
+}
+
+.product-info p {
+	text-align: center;
+	margin: 8px 0;
+}
+
+.product-logo {
+	padding: 16px;
+	border-radius: 8px;
+	background-color: #fff;
+}
+.product-logo.dycovid img {
+	width: 180px;
+}
+
+.product-item:hover {
+	border-color: #fff;
+	box-shadow: 0 4px 16px 0 rgba(0, 0, 0, 0.1);
+}
+.product-item:hover .product-image {
+	transform: translateY(2rem) scale(1.2);
+}
+.product-item:hover .product-logo {
+	box-shadow: 0 -16px 24px 0 rgba(0, 0, 0, 0.1);
+}
+
+.team-section {
+	padding-top: 2em;
+	position: relative;
+}
+
+.team-section .container {
+	position: relative;
+	z-index: 2;
+}
+
+.team-section .lead {
+	color: black;
+}
+.team-member {
+	transition: 0.3s ease-in-out;
+}
+
+.team-member .info {
+	padding: 1rem;
+	background-color: rgba(255, 255, 255, 0.8);
+	border-bottom-left-radius: 16px;
+	border-bottom-right-radius: 16px;
+	transition: 0.3s ease-in-out;
+}
+.team-member img {
+	border-radius: 16px;
+	transition: 0.3s all ease-in-out;
+}
+
+.team-member:hover {
+	transform: translateY(-8px);
+}
+
+.team-member:hover .info {
+	background-color: #fff;
+	box-shadow: 0 4px 16px 0 rgba(0, 0, 0, 0.1);
+}
+
+.team-member:hover img {
+	border-bottom-left-radius: 0;
+	border-bottom-right-radius: 0;
+}
+
+.scene--full {
+	width: 100%;
+	min-height: 100%;
+}
+
+@media (max-width: 919px) {
+	.header .content {
+		flex-direction: column-reverse;
+		position: relative;
+	}
+	.header .headline {
+		margin-top: 2rem;
+		display: block;
+		text-align: center;
+	}
+}
