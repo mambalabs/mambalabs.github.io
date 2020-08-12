@@ -311,7 +311,7 @@ jQuery(document).ready(function ($) {
 			Username: 'apikey',
 			Password:
 				'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',
-			To: 'gabriel.lourenco@mambalabs.com.br',
+			To: 'contato@mambalabs.com.br',
 			From: 'contato@mambalabs.com.br',
 			Subject: assunto,
 			Body: 'Mensagem de ' + nome + ' (' + email + '): ' + mensagem,
