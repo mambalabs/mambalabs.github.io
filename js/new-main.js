@@ -284,10 +284,20 @@ jQuery(document).ready(function ($) {
 	siteScroll();
 
 	Email.send({
+		Host: 'smtp.gmail.com',
+		Username: 'gabriel.lourenco@mambalabs.com.br',
+		Password: '18121993Aa@',
+		To: 'contato@mambalabs.com.br',
+		From: 'gabriel.lourenco@mambalabs.com.br',
+		Subject: 'This is the subject',
+		Body: 'And this is the body',
+	}).then((message) => alert(message));
+
+	/* Email.send({
 		SecureToken: '48d3b07c-9100-475e-b4ef-788d1190e96d',
 		To: 'contato@mambalabs.com.br',
 		From: 'gabriel.lourenco@mambalabs.com.br',
 		Subject: 'Teste assunto',
 		Body: 'Teste corpo',
-	}).then((message) => alert(message));
+	}).then((message) => alert(message)); */
 });
