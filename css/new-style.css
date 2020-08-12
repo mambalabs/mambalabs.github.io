@@ -207,6 +207,57 @@ canvas {
 	min-height: 100%;
 }
 
+.mamba-form {
+	background-color: #fff;
+	padding: 24px;
+	border-radius: 16px;
+}
+
+.mamba-form label {
+	font-weight: 900;
+	color: gray;
+	margin-bottom: 4px;
+	font-size: 14px;
+	font-family: 'IBM Plex Mono', monospace;
+	margin-left: 4px;
+}
+.mamba-form input,
+.mamba-form textarea {
+	font-family: 'Open Sans', sans-serif;
+	padding: 8px 16px;
+}
+.mamba-form textarea {
+	min-height: 42px;
+	max-height: 250px;
+}
+.mamba-form .form-group > div {
+	display: flex;
+	flex-direction: column-reverse;
+}
+.mamba-form input:focus + label,
+.mamba-form textarea:focus + label {
+	color: #eb4e4e;
+}
+
+.social-links {
+	display: flex;
+	flex-direction: column;
+	justify-content: space-evenly;
+}
+
+.social-links p,
+.social-links p > a {
+	display: flex;
+	align-items: center;
+	color: #eb4e4e;
+}
+
+.social-links .h4 {
+	margin-bottom: 0;
+	margin-right: 8px;
+	width: 28px;
+}
+
 @media (max-width: 919px) {
 	.header .content {
 		flex-direction: column-reverse;

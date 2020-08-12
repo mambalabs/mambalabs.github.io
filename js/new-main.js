@@ -283,11 +283,45 @@ jQuery(document).ready(function ($) {
 	};
 	siteScroll();
 
-	Email.send({
-		SecureToken: '48d3b07c-9100-475e-b4ef-788d1190e96d',
-		To: 'contato@mambalabs.com.br',
-		From: 'gabriel.lourenco@mambalabs.com.br',
-		Subject: 'Teste assunto',
-		Body: 'Teste corpo',
-	}).then((message) => alert(message));
+	function success() {
+		$('#formResult').html(
+			'<div class="alert alert-success">Sua mensagem foi enviada!</div>',
+		);
+		setTimeout(() => {
+			$('#formResult').html('');
+		}, 2500);
+	}
+	function error() {
+		$('#formResult').html(
+			'<div class="alert alert-danger">Não foi possível enviar a mensagem. Tente novamente ou utilize nossos outros canais de comunicação</div>',
+		);
+	}
+
+	document.getElementById('form').addEventListener('submit', function (e) {
+		e.preventDefault();
+		$('#formResult').html('');
+
+		var nome = e.target[0].value;
+		var email = e.target[1].value;
+		var assunto = e.target[2].value;
+		var mensagem = e.target[3].value;
+
+		Email.send({
+			Host: 'smtp.sendgrid.net',
+			Username: 'apikey',
+			Password:
+				'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',
+			To: 'gabriel.lourenco@mambalabs.com.br',
+			From: 'contato@mambalabs.com.br',
+			Subject: assunto,
+			Body: 'Mensagem de ' + nome + ' (' + email + '): ' + mensagem,
+		}).then((message) => {
+			if (message === 'OK') {
+				success();
+				e.target.reset();
+			} else {
+				error();
+			}
+		});
+	});
 });
