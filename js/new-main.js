@@ -282,4 +282,12 @@ jQuery(document).ready(function ($) {
 		});
 	};
 	siteScroll();
+
+	Email.send({
+		SecureToken: '48d3b07c-9100-475e-b4ef-788d1190e96d',
+		To: 'contato@mambalabs.com.br',
+		From: 'gabriel.lourenco@mambalabs.com.br',
+		Subject: 'Teste assunto',
+		Body: 'Teste corpo',
+	}).then((message) => alert(message));
 });
