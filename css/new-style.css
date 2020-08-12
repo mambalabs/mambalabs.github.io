@@ -68,6 +68,10 @@ canvas {
 	animation: caret 1s steps(1) infinite;
 }
 
+figure.circle-bg {
+	overflow: hidden;
+}
+
 @keyframes caret {
 	50% {
 		border-color: transparent;
@@ -267,5 +271,10 @@ canvas {
 		margin-top: 2rem;
 		display: block;
 		text-align: center;
+	}
+}
+@media (max-width: 767px) {
+	.social-links {
+		margin-top: 24px;
 	}
 }
