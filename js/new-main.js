@@ -312,8 +312,8 @@ jQuery(document).ready(function ($) {
 			Host: 'smtp.sendgrid.net',
 			Username: 'apikey',
 			Password: k,
-			To: 'gabriel.lourenco@mambalabs.com.br',
-			From: 'contato@mambalabs.com.br',
+			To: 'contato@mambalabs.com.br',
+			From: 'gabriel.lourenco@mambalabs.com.br',
 			Subject: assunto,
 			Body: 'Mensagem de ' + nome + ' (' + email + '): ' + mensagem,
 		}).then((message) => {
