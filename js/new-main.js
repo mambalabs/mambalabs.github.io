@@ -313,10 +313,12 @@ jQuery(document).ready(function ($) {
 			Username: 'apikey',
 			Password: k,
 			To: 'contato@mambalabs.com.br',
-			From: 'gabriel.lourenco@mambalabs.com.br',
+			From: 'contato@mambalabs.com.br',
 			Subject: assunto,
 			Body: 'Mensagem de ' + nome + ' (' + email + '): ' + mensagem,
 		}).then((message) => {
+			console.log(message)
+
 			if (message === 'OK') {
 				success();
 				e.target.reset();
