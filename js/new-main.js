@@ -291,12 +291,15 @@ jQuery(document).ready(function ($) {
 		);
 		setTimeout(() => {
 			$('#formResult').html('');
-		}, 2500);
+		}, 5000);
 	}
 	function error() {
 		$('#formResult').html(
 			'<div class="alert alert-danger">Não foi possível enviar a mensagem. Tente novamente ou utilize nossos outros canais de comunicação</div>',
 		);
+		setTimeout(() => {
+			$('#formResult').html('');
+		}, 5000);
 	}
 
 	document.getElementById('form').addEventListener('submit', function (e) {
@@ -309,15 +312,12 @@ jQuery(document).ready(function ($) {
 		var mensagem = e.target[3].value;
 
 		Email.send({
-			Host: 'smtp.sendgrid.net',
-			Username: 'apikey',
-			Password: k,
+			SecureToken : 'f48396b9-a09e-4133-a0db-774a8d65f063',
 			To: 'contato@mambalabs.com.br',
-			From: 'contato@mambalabs.com.br',
+			From: 'matheus.rodrigues@mambalabs.com.br',
 			Subject: assunto,
 			Body: 'Mensagem de ' + nome + ' (' + email + '): ' + mensagem,
 		}).then((message) => {
-			console.log(message)
 
 			if (message === 'OK') {
 				success();
